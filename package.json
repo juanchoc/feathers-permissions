@@ -2,7 +2,7 @@
   "name": "feathers-permissions",
   "description": "Flexible and powerful permissions module for Feathers",
   "version": "0.1.1",
-  "homepage": "https://github.com/feathersjs/feathers-permissions",
+  "homepage": "https://github.com/juanchoc/feathers-permissions",
   "main": "lib/",
   "keywords": [
     "feathers",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/feathersjs/feathers-permissions.git"
+    "url": "git://github.com/juanchoc/feathers-permissions.git"
   },
   "author": {
     "name": "Feathers contributors",
@@ -20,12 +20,13 @@
   },
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/feathersjs/feathers-permissions/issues"
+    "url": "https://github.com/juanchoc/feathers-permissions/issues"
   },
   "engines": {
     "node": ">= 4"
   },
   "scripts": {
+    "preinstall": "npm run prepublish",
     "prepublish": "npm run compile",
     "publish": "git push origin --tags && npm run changelog && git push origin",
     "release:patch": "npm version patch && npm publish",
@@ -80,3 +81,4 @@
     "sinon-chai": "^2.8.0"
   }
 }
+
