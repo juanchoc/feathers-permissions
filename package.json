@@ -26,6 +26,7 @@
     "node": ">= 4"
   },
   "scripts": {
+    "preinstall": "npm run prepublish",
     "prepublish": "npm run compile",
     "publish": "git push origin --tags && npm run changelog && git push origin",
     "release:patch": "npm version patch && npm publish",
