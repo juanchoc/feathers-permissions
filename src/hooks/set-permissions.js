@@ -60,7 +60,7 @@ export default function setPermissions (options = {}) {
     if (hook.type === 'after') {
       // Update entity with new permissions in the DB
       items = Array.isArray(items) ? items : [items];
-      const promises = items.map(item => service.update(hook.id || item[service.id], item));
+      const promises = items.map(item => service.patch(hook.id || item[service.id], { [options.field]: item[options.field] }));
 
       // TODO (EK): Handle if an update fails in the middle of updating
       // a bunch of records. Do we roll back? We likely should be using better
